@@ -1,0 +1,29 @@
+from selenium  import webdriver
+import time
+
+first_url = 'http://www.baidu.com'
+second_url = 'https://www.baidu.com/s?wd=nba&rsv_spt=1&rsv_iqid=0x81189a76000115dd&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=3&rsv_sug1=3&rsv_sug7=100&rsv_sug2=0&inputT=527&rsv_sug4=527'
+
+driver = webdriver.Chrome()
+driver.implicitly_wait(30)
+
+driver.get(first_url)
+
+# driver.get(second_url)
+time.sleep(5)
+
+driver.find_element_by_id("kw").send_keys("selenim")
+
+driver.find_element_by_id("su").click()
+
+time.sleep(5)
+
+driver.get(second_url)
+
+time.sleep(5)
+
+driver.back()
+
+driver.forward()
+
+driver.quit()
