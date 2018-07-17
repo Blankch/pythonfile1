@@ -1,0 +1,29 @@
+    V=models.CharField(max_length=None[, **options])　　　　#varchar
+    V=models.EmailField([max_length=75, **options])　　　　#varchar
+    V=models.URLField([verify_exists=True, max_length=200, **options])　　　　#varchar
+    V=models.FileField(upload_to=None[, max_length=100, **options])　　　　#varchar
+    #upload_to指定保存目录可带格式，
+    V=models.ImageField(upload_to=None[, height_field=None, width_field=None, max_length=100, **options])
+    V=models.IPAddressField([**options])　　　　#varchar
+    V=models.FilePathField(path=None[, match=None, recursive=False, max_length=100, **options])　#varchar
+    V=models.SlugField([max_length=50, **options])　　　　#varchar，标签，内含索引
+    V=models.CommaSeparatedIntegerField(max_length=None[, **options])　　　　#varchar
+    V=models.IntegerField([**options])　　　　#int
+    V=models.PositiveIntegerField([**options])　　　　#int 正整数
+    V=models.SmallIntegerField([**options])　　　　#smallint
+    V=models.PositiveSmallIntegerField([**options])　　　　#smallint 正整数
+    V=models.AutoField(**options)　　　　#int；在Django代码内是自增
+    V=models.DecimalField(max_digits=None, decimal_places=None[, **options])　　　　#decimal
+    V=models.FloatField([**options])　　　　#real
+    V=models.BooleanField(**options)　　　　#boolean或bit
+    V=models.NullBooleanField([**options])　　　　#bit字段上可以设置上null值
+    V=models.DateField([auto_now=False, auto_now_add=False, **options])　　　　#date
+    #auto_now最后修改记录的日期；auto_now_add添加记录的日期
+    V=models.DateTimeField([auto_now=False, auto_now_add=False, **options])　　　　#datetime
+    V=models.TimeField([auto_now=False, auto_now_add=False, **options])　　　　#time
+    V=models.TextField([**options])　　　　#text
+    V=models.XMLField(schema_path=None[, **options])　　　　#text
+    ——————————————————————————–
+    V=models.ForeignKey(othermodel[, **options])　　　　#外键，关联其它模型，创建关联索引
+    V=models.ManyToManyField(othermodel[, **options])　　　　#多对多，关联其它模型，创建关联表
+    V=models.OneToOneField(othermodel[, parent_link=False, **options])　　　　#一对一，字段关联表属性
